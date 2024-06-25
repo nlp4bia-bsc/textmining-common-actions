@@ -1,0 +1,13 @@
+name: 'Get SSH key'
+description: 'Get the SSH key from secrets'
+inputs:
+  server:
+    description: 'Name of server'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - run: bash script.sh
+      shell: bash
+      with:
+        args: ${{ inputs.example_input }}
