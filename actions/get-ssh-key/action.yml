@@ -7,7 +7,5 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: bash script.sh
+    - run: bash script.sh ${{ inputs.server }}
       shell: bash
-      with:
-        args: ${{ inputs.example_input }}
