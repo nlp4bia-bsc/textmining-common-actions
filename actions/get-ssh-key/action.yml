@@ -7,5 +7,5 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: cd actions/get-ssh-key && bash script.sh ${{ inputs.server }}
+    - run: ${{ github.action_path }}/script.sh ${{ inputs.server }}
       shell: bash
