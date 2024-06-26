@@ -7,5 +7,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: ${{ github.action_path }}/script.sh ${{ inputs.server }}
+    - run: |
+        chmod +x ${{ github.action_path }}/script.sh
+        ${{ github.action_path }}/script.sh ${{ inputs.server }}
       shell: bash
