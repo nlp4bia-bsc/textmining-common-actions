@@ -4,6 +4,9 @@ inputs:
   server:
     description: 'Name of server'
     required: true
+  test_secret:
+    description: 'Test secret'
+    required: true
 runs:
   using: 'composite'
   steps:
@@ -11,3 +14,5 @@ runs:
         chmod +x ${{ github.action_path }}/script.sh
         ${{ github.action_path }}/script.sh ${{ inputs.server }}
       shell: bash
+      env:
+        TEST_SECRET: ${{ inputs.test_secret }}

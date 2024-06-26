@@ -3,7 +3,7 @@
 set -e
 
 echo "Input recibido: $1"
-echo "${{ secrets.TEST_SECRET }}"
+echo "$TEST_SECRET"
 
 # Añade tu lógica aquí
 output="Output generado a partir del input: $1"
